@@ -1,0 +1,14 @@
+// $accent: #000;
+
+// %raleway-400 {
+//   font-family: 'Raleway-Regular', sans-serif;
+//   font-weight: 400;
+// }
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
