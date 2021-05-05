@@ -1,9 +1,20 @@
 // $accent: #000;
 
-// %raleway-400 {
-//   font-family: 'Raleway-Regular', sans-serif;
-//   font-weight: 400;
-// }
+
+%poppins-400 {
+  font-family: 'Poppins-Regular', sans-serif;
+  font-weight: 400;
+}
+
+%poppins-500 {
+  font-family: 'Poppins-Medium', sans-serif;
+  font-weight: 500;
+}
+
+%poppins-600 {
+  font-family: 'Poppins-SemiBol', sans-serif;
+  font-weight: 600;
+}
 
 @function max($numbers...) {
   @return m#{a}x(#{$numbers});
