@@ -1,0 +1,14 @@
+.header {
+  padding: 40px 0;
+  background-color: $background;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    margin-right: 20px;
+  }
+}

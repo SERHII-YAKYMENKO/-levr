@@ -8,20 +8,35 @@ body {
 body {
   display: grid;
   grid-template-rows: auto 1fr auto;
+  @extend %poppins-400;
+  font-size: 16px;
 }
 
+.container {
+  padding: 0 10px;
+  margin: 0 auto;
+  max-width: 1600px;
+}
 
 a {
   color: inherit;
   text-decoration: none;
 }
 
-// :focus-visible {
-//   outline: 1px solid #000;
-// }
+:focus-visible {
+  outline: 1px solid $accent;
+}
 
 .interactions {
   font-size: 0;
   line-height: 0;
   color: inherit;
+}
+
+.title {
+  color: $title;
+}
+
+.subtitle {
+  color: $subtitle;
 }
