@@ -30,9 +30,22 @@
           <span>10</span>
         </a>
         <div class="header__login">
-          <a class="header__sign" href="#">
+          <button id="myBtn">Sign in</button>
+          <!-- The Modal -->
+          <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <form>
+                <input type="text" placeholder="Ваше имя" required>
+                <input type="text" placeholder="Ваш телефон" required>
+                <input type="submit" value="Отправить">
+              </form>
+            </div>
+          </div>
+          <!-- <a class="header__sign" href="#">
             Sign in
-          </a>
+          </a> -->
           <a class="header__create" href="#">
             Create account
           </a>
@@ -71,6 +84,15 @@
   </main>
   <footer class="footer">
   </footer>
+
+  <!-- <div id="modal">
+    <form>
+      <input type="text" placeholder="Ваше имя">
+      <input type="text" placeholder="Ваш телефон">
+      <input type="submit" value="Отправить">
+    </form>
+  </div> -->
+
   <script src="js/main.min.js"></script>
 </body>
 
