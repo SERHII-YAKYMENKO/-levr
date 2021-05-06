@@ -2,6 +2,9 @@
 @import 'base/_reset';
 @import 'base/_vars';
 @import 'base/_mixin';
+@import '../../node_modules/jquery-form-styler/dist/jquery.formstyler';
+@import '../../node_modules/jquery-form-styler/dist/jquery.formstyler.theme';
 @import 'base/_global';
 @import 'layout/_header';
-@import 'layout/_menu';
+@import 'components/_menu';
+@import 'components/_search';

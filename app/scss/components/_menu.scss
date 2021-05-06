@@ -24,15 +24,18 @@
   &__item {
     position: relative;
     padding: 20px 18px;
+    @extend %poppins-500;
     color: $menu;
     transition: all 0.3s;
 
     &:not(:last-child) {
-      margin-right: 2.5%;
+      margin-right: 24px;
     }
 
     &:hover {
+      @extend %poppins-600;
       color: #fff;
+
 
       &::after {
         position: absolute;
@@ -47,6 +50,10 @@
         border-top-right-radius: 4px;
       }
     }
+  }
+
+  &__link {
+    padding: 20px 0;
   }
 }
 
@@ -80,6 +87,19 @@
       right: 20px;
       transform: rotate(180deg);
       background-image: url('../images/icons/arrow-white.svg');
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      bottom: -22px;
+      right: 50px;
+      width: 13px;
+      height: 7px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url('../images/icons/arrow.svg');
+      transform: rotate(180deg) translateY(-50%);
     }
   }
 }

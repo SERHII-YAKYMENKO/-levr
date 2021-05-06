@@ -1,0 +1,9 @@
+.search {
+
+  &::placeholder {
+    @extend %poppins-400;
+    font-style: 18px;
+    line-height: 27px;
+    color: $placeholder;
+  }
+}

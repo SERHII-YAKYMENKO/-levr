@@ -11,4 +11,56 @@
   &__logo {
     margin-right: 20px;
   }
+
+  &__login {
+    @extend %poppins-600;
+    font-size: 18px;
+    line-height: 27px;
+    color: $placeholder;
+  }
+
+  &__sign {
+    padding: 20px;
+    margin-right: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: all 0.3s;
+
+    &:hover {
+      color: #fff;
+      background-color: $accent;
+    }
+  }
+
+  &__create {
+    padding: 20px;
+    border-radius: 8px;
+    color: #fff;
+    background-color: $accent;
+  }
+
+  &__cart {
+    position: relative;
+    width: 24px;
+    height: 21px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-image: url('../images/icons/basket.svg');
+
+    span {
+      position: absolute;
+      bottom: -12px;
+      right: -15px;
+      width: 23px;
+      height: 23px;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      @extend %poppins-500;
+      font-size: 14px;
+      line-height: 21px;
+      text-align: center;
+      color: #fff;
+      background-color: $accent;
+    }
+  }
 }
