@@ -2,6 +2,10 @@
   padding: 40px 0;
   background-color: $background;
 
+  &__wrapper {
+    display: flex;
+    align-items: center;
+  }
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -9,7 +13,7 @@
   }
 
   &__logo {
-    margin-right: 20px;
+    margin-right: 35px;
   }
 
   &__login {
