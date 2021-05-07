@@ -1,0 +1,27 @@
+.login {
+  @extend %poppins-600;
+  font-size: 18px;
+  line-height: 27px;
+  color: $placeholder;
+  
+  &__signIn {
+    padding: 20px;
+    margin-right: 20px;
+    border-radius: 8px;
+    @extend %poppins-600;
+    background-color: #fff;
+    transition: all 0.3s;
+
+    &:hover {
+      color: #fff;
+      background-color: $accent;
+    }
+  }
+
+  &__create {
+    padding: 20px;
+    border-radius: 8px;
+    color: #fff;
+    background-color: $accent;
+  }
+}

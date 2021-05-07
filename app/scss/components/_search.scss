@@ -2,31 +2,31 @@
   &__top {
     position: relative;
     margin-left: -3%;
-  }
 
-  &::placeholder {
-    @extend %poppins-400;
-    font-style: 18px;
-    line-height: 27px;
-    color: $placeholder;
-  }
+    &::placeholder {
+      @extend %poppins-400;
+      font-style: 18px;
+      line-height: 27px;
+      color: $placeholder;
+    }
 
-  &__input {
-    padding: 20px 60px 20px 40px;
-    min-width: 763px;
-    border-radius: 8px;
-    border: none;
-    background-color: $input;
-  }
+    input {
+      padding: 20px 60px 20px 40px;
+      min-width: 763px;
+      border-radius: 8px;
+      border: none;
+      background-color: $input;
+    }
 
-  &__btn {
-    position: absolute;
-    top: 33px;
-    right: 28px;
-    width: 24px;
-    height: 24px;
-    transform: translateY(-50%);
-    background-repeat: no-repeat;
-    background-image: url('../images/icons/search.svg');
+    button {
+      position: absolute;
+      top: 33px;
+      right: 28px;
+      width: 24px;
+      height: 24px;
+      transform: translateY(-50%);
+      background-repeat: no-repeat;
+      background-image: url('../images/icons/search.svg');
+    }
   }
 }
