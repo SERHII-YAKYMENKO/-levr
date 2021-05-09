@@ -21,6 +21,13 @@
     }
   }
 
+  &__follow p {
+    margin-bottom: 25px;
+    font-size: 18px;
+    line-height: 24px;
+    color: $title;
+  }
+
   &__logo {
     display: inline-block;
     margin-bottom: 40px;
@@ -51,8 +58,15 @@
   }
 
   &__item {
+    transition: color 0.3s ease-in-out;
     &:not(:last-child) {
       margin-bottom: 20px;
+    }
+  }
+
+  &__link {
+    &:hover {
+      color: $accent;
     }
   }
 }
