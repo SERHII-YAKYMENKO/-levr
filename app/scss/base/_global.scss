@@ -9,7 +9,8 @@ body {
   display: grid;
   grid-template-rows: auto 1fr auto;
   @extend %poppins-400;
-  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .container {

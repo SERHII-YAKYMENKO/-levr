@@ -2,11 +2,11 @@
   &__top {
     position: relative;
     margin-left: -3%;
+    @extend %poppins-400;
+    font-size: 1.125rem;
+    line-height: 1.688rem;
 
     &::placeholder {
-      @extend %poppins-400;
-      font-style: 18px;
-      line-height: 27px;
       color: $placeholder;
     }
 

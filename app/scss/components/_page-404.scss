@@ -1,0 +1,17 @@
+.page-404 {
+  text-align: center;
+  color: $accent;
+  background-color: #fff;
+
+
+  span {
+    @extend %poppins-600;
+    font-size: 8rem;
+    line-height: 8rem;
+  }
+
+  p {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+}

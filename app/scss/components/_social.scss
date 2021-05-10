@@ -30,22 +30,42 @@
 
     &--facebook {
       background-image: url('../images/icons/social/facebook.svg');
+
+      &:hover {
+        background-image: url('../images/icons/social/social-accent/facebook.svg');
+      }
     }
 
     &--youtube {
       background-image: url('../images/icons/social/youtube.svg');
+
+      &:hover {
+        background-image: url('../images/icons/social/social-accent/youtube.svg');
+      }
     }
 
     &--twitter {
       background-image: url('../images/icons/social/twitter.svg');
+
+      &:hover {
+        background-image: url('../images/icons/social/social-accent/twitter.svg');
+      }
     }
 
     &--linkedIn {
       background-image: url('../images/icons/social/linkedIn.svg');
+
+      &:hover {
+        background-image: url('../images/icons/social/social-accent/linkedIn.svg');
+      }
     }
 
     &--instagram {
       background-image: url('../images/icons/social/instagram.svg');
+
+      &:hover {
+        background-image: url('../images/icons/social/social-accent/instagram.svg');
+      }
     }
   }
 }
