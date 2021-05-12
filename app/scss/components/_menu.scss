@@ -1,8 +1,11 @@
 .menu {
-  margin-top: 25px;
+  position: absolute;
+  top: 132px;
+  right: 0;
+  left: 0;
   @extend %poppins-500;
-  font-size: 1.125rem;
-  line-height: 1.688rem;
+  font-size: 1.8rem;
+  line-height: 2.7rem;
 
   &__list {
     display: flex;
@@ -58,8 +61,8 @@
     padding: 20px 45px 20px 20px;
     border-radius: 8px;
     @extend %poppins-600;
-    font-size: 1.125rem;
-    line-height: 1.688rem;
+    font-size: 1.8rem;
+    line-height: 2.7rem;
     color: $accent;
 
     &::after {
@@ -109,7 +112,7 @@
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgb(0, 0, 0);
+  // background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
   z-index: 100;
 }
@@ -147,7 +150,7 @@
 
 .close {
   float: right;
-  font-size: 1.75rem;
+  font-size: 2.8rem;
   font-weight: bold;
   color: #aaa;
 }

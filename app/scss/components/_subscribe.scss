@@ -1,0 +1,66 @@
+.subscribe {
+  position: relative;
+  padding: 115px 0;
+  background-color: $accent;
+  overflow: hidden;
+
+  &::before {
+    position: absolute;
+    content: '';
+    bottom: -80px;
+    right: -5px;
+    padding: 75px;
+    background-repeat: no-repeat;
+    background-image: url('../images/icons/squareBig.svg');
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    position: relative;
+    max-width: 540px;
+    width: 100%;
+    font-size: 4rem;
+    line-height: 6rem;
+    color: #fff;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: -25px;
+      left: -35px;
+      padding: 30px;
+      background-repeat: no-repeat;
+      background-image: url('../images/icons/square.svg');
+    }
+  }
+
+  .form {
+
+    &__input {
+      padding: 10px 20px;
+      border-radius: 8px;
+      min-width: 488px;
+      border: transparent;
+      background-color: #f3f3f329;
+      outline: none;
+
+      &::placeholder {
+        color: $placeholder-footer;
+      }
+    }
+
+    &__btn {
+      padding: 20px 36px;
+      margin-left: 15px;
+      text-transform: uppercase;
+      @extend %poppins-600;
+      color: $accent;
+      background-color: #fff;
+    }
+  }
+}

@@ -1,6 +1,7 @@
 .header {
   padding: 40px 0;
   background-color: $background;
+  position: relative;
 
   &__inner {
     display: flex;
@@ -29,8 +30,8 @@
       border: 2px solid #fff;
       border-radius: 50%;
       @extend %poppins-500;
-      font-size: 0.875rem;
-      line-height: 1.313rem;
+      font-size: 1.4rem;
+      line-height: 2.1rem;
       text-align: center;
       color: #fff;
       background-color: $accent;
