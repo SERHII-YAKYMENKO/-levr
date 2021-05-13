@@ -42,21 +42,12 @@
   .form {
 
     &__input {
-      padding: 10px 20px;
-      border-radius: 8px;
       min-width: 488px;
-      border: transparent;
       background-color: #f3f3f329;
-      outline: none;
-
-      &::placeholder {
-        color: $placeholder-footer;
-      }
     }
 
     &__btn {
       padding: 20px 36px;
-      margin-left: 15px;
       text-transform: uppercase;
       @extend %poppins-600;
       color: $accent;

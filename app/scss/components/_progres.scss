@@ -1,0 +1,57 @@
+.progres {
+  padding: 100px 0;
+  background-color: $bg-progres;
+
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__item {
+    position: relative;
+    padding: 0 15px;
+    text-align: center;
+    color: #fff;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      padding: 28px;
+      background-repeat: no-repeat;
+    }
+
+    &--img1 {
+      &::before {
+        background-image: url('../images/icons/progres/stores.svg');
+      }
+    }
+
+    &--img2 {
+      &::before {
+        background-image: url('../images/icons/progres/custumer.svg');
+      }
+    }
+
+    &--img3 {
+      &::before {
+        background-image: url('../images/icons/progres/book.svg');
+      }
+    }
+
+    span {
+      padding-left: 85px;
+      @extend %poppins-600;
+      font-size: 5rem;
+      line-height: 7.5rem;
+    }
+
+    p {
+      @extend %poppins-400;
+      font-size: 2rem;
+      line-height: 3rem;
+      color: #fff9;
+    }
+  }
+}
