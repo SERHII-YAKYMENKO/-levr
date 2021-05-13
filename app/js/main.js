@@ -1,10 +1,17 @@
 $(function () {
 
+  $('.top-slider__list').slick({
+    arrows: false,
+    // autoplay: true,
+    // autoplaySpeed: 10000,
+    dots: true,
+  });
+
   $('.menu__dropdown').on('click', function () {
     $('.menu__list').toggleClass('menu__list--active')
     $('.menu__dropdown').toggleClass('menu__dropdown--active')
   });
-  
+
 });
 
 // Get the modal
