@@ -1,11 +1,12 @@
 .top-slider {
   position: relative;
-  background-color: #430d54ba;
+  max-width: 100vw;
 
   &__list {
-    max-width: 99vw;
+    max-width: calc(100vw - 18px);
     width: 100%;
-   
+    margin: 0 auto;
+    position: relative;
   }
 
   &__item {
@@ -16,7 +17,7 @@
   &__img {
     position: absolute;
     top: 0;
-     z-index: -1;
+    z-index: -1;
   }
 
   &__hot {
@@ -73,6 +74,38 @@
       padding: 12px;
       transform: translateY(-50%);
       background-image: url('../images/icons/arrow-right.svg');
+    }
+  }
+
+  .slick-dots {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    bottom: 30px;
+    transform: translateY(-50%);
+  }
+
+  li {
+    &:not(:last-child) {
+      margin-right: 14px;
+    }
+
+    button {
+      position: relative;
+      padding: 3px 15px;
+      border-radius: 4px;
+      font-size: 0;
+      line-height: 0;
+      background-color: #ffffff38;
+    }
+  }
+
+  .slick-active {
+    button {
+      padding: 3px 30px;
+      background-color: #fff;
     }
   }
 }

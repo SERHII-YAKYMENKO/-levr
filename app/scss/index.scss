@@ -3,6 +3,8 @@
 @import 'base/_vars';
 @import 'base/_mixin';
 @import '../../node_modules/slick-carousel/slick/slick.scss';
+// @import '../../node_modules/owl.carousel/dist/assets/owl.carousel';
+// @import '../../node_modules/owl.carousel/dist/assets/owl.theme.default';
 // @import '../../node_modules/jquery-form-styler/dist/jquery.formstyler';
 // @import '../../node_modules/jquery-form-styler/dist/jquery.formstyler.theme';
 @import '../../node_modules/fancybox/dist/css/jquery.fancybox';
@@ -16,3 +18,4 @@
 @import 'components/_subscribe';
 @import 'components/_progres';
 @import 'components/_top-slider';
+@import 'components/_trend';

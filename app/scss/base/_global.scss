@@ -40,7 +40,18 @@ a {
   color: inherit;
 }
 
+.title-box {
+  margin: 0 auto 80px;
+  max-width: 585px;
+  width: 100%;
+  text-align: center;
+}
+
 .title {
+  margin-bottom: 30px;
+  @extend %poppins-600;
+  font-size: 3.5rem;
+  line-height: 3rem;
   color: $title;
 }
 
