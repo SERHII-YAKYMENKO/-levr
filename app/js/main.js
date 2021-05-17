@@ -7,6 +7,14 @@ $(function () {
     dots: true,
   });
 
+  $('.popular__list').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: true,
+    // autoplay: true,
+    // autoplaySpeed: 10000,
+  });
+
   $('.menu__dropdown').on('click', function () {
     $('.menu__list').toggleClass('menu__list--active')
     $('.menu__dropdown').toggleClass('menu__dropdown--active')

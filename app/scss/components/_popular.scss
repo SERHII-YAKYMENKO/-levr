@@ -1,0 +1,146 @@
+.popular {
+  padding: 150px 0;
+  background-color: #fff;
+
+  &__title {
+    display: inline-block;
+    margin-bottom: 60px;
+    @extend %poppins-600;
+    font-size: 3.5rem;
+    line-height: 5.25rem;
+  }
+
+  &__link {
+    position: relative;
+    float: right;
+    padding-right: 40px;
+    @extend %poppins-500;
+    color: $accent;
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: 0;
+      right: 0;
+      padding: 12px;
+      background-image: url('../images/icons/arrow-accent.svg');
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    overflow: hidden;
+
+    // .slick-list {
+    // margin-right: -80px;
+    // }
+
+    // .slick-slide {
+    // margin-right: 80px;
+    // }
+  }
+
+  &__item {
+    display: flex !important;
+    max-width: 515px;
+    // max-width: calc(33.3333% - 40px);
+    // width: calc(33.3333% - 40px);
+    // width: 100%;
+    // background-color: rgb(245, 234, 234);
+  }
+
+  &__img-box {
+    position: relative;
+    overflow: hidden;
+    // max-width: 200px;
+    // height: 286px;
+    // padding: 0 23.75% 67.75%;
+    padding: 0 19.5% 55%;
+    margin-right: 38px;
+    height: 0;
+    border-radius: 20px;
+
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+    }
+  }
+
+  &__category-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  &__category {
+    padding: 11px 25px;
+    margin-right: 14px;
+    border-radius: 10px;
+    color: $accent;
+    background-color: #8d28ad26;
+  }
+
+  &__rating {
+    padding: 11px 20px;
+    border-radius: 10px;
+    background-color: #FFD782;
+  }
+
+  &__star {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: 13px;
+      left: -3px;
+      transform: translateY(-50%);
+      padding: 9px;
+      background-repeat: no-repeat;
+      background-image: url('../images/icons/star-pop.svg');
+    }
+  }
+
+  &__number {
+    padding-left: 22px;
+  }
+
+  &__name {
+    margin-bottom: 14px;
+    @extend %poppins-500;
+    font-size: 2.4rem;
+    line-height: 3rem;
+    color: $title;
+  }
+
+  &__autor {
+    margin-bottom: 32px;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    color: #000c;
+  }
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+
+  &__curent {
+    margin-right: 22px;
+    @extend %poppins-600;
+    font-size: 3rem;
+    line-height: 2.4rem;
+    color: $accent;
+  }
+
+  &__old {
+    text-decoration: line-through;
+    color: $placeholder;
+  }
+}
