@@ -1,5 +1,5 @@
 .trend {
-  padding: 100px 0;
+  padding: 150px 0;
   background-color: #fff;
 
   &__list {
@@ -9,8 +9,7 @@
   }
 
   &__item {
-    margin: 0 12px;
-    max-width: calc(20% - 24px);
+    max-width: calc(20% - 50px);
     width: 100%;
     background-color: transparent;
   }
@@ -19,7 +18,7 @@
     position: relative;
     overflow: hidden;
     padding: 0 50% 143%;
-    margin-bottom: 38px;
+    margin-bottom: 35px;
     border-radius: 20px;
     height: 0;
 
@@ -116,15 +115,24 @@
   &__price {
     display: inline-flex;
     align-items: center;
-    padding: 10px 15px;
+    padding: 17px 25px;
     border: 1px solid $social-border;
     border-radius: 10px;
-  }
-
-  &__current {
+    @extend %poppins-600;
     font-size: 2.4rem;
     line-height: 2.4rem;
     color: $accent;
+    background-color: #fff;
+    transition: all ease-in-out 0.3s;
+
+    &:hover {
+      color: #fff;
+      background-color: $accent;
+
+      .trend__old {
+        color: #fff;
+      }
+    }
   }
 
   &__old {
@@ -134,5 +142,6 @@
     line-height: 2.4rem;
     color: #474747;
     text-decoration: line-through;
+    transition: all ease-in-out 0.3s;
   }
 }

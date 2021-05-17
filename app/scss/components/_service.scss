@@ -1,0 +1,66 @@
+.service {
+  padding: 90px 0 60px;
+  background-color: $service;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item {
+    position: relative;
+    padding: 0 30px;
+    max-width: 25%;
+    width: 100%;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      transform: translateY(-50%);
+      padding: 30px;
+      background-repeat: no-repeat;
+    }
+
+    &--img1 {
+      &::before {
+        background-image: url('../images/icons/service/icon1.svg');
+      }
+    }
+
+    &--img2 {
+      &::before {
+        background-image: url('../images/icons/service/icon2.svg');
+      }
+    }
+
+    &--img3 {
+      &::before {
+        background-image: url('../images/icons/service/icon3.svg');
+      }
+    }
+
+    &--img4 {
+      &::before {
+        background-image: url('../images/icons/service/icon4.svg');
+      }
+    }
+  }
+
+  &__title {
+    padding-top: 40px;
+    margin: 20px 0;
+    @extend %poppins-500;
+    font-size: 2.2rem;
+    line-height: 2.4rem;
+    color: $title;
+  }
+
+  &__text {
+    @extend %poppins-400;
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    color: #00000080;
+  }
+}
