@@ -58,3 +58,11 @@ a {
 .subtitle {
   color: $subtitle;
 }
+
+.title-left {
+  margin-bottom: 80px;
+  @extend %poppins-600;
+  font-size: 3.5rem;
+  line-height: 5.25rem;
+  color: $title;
+}
