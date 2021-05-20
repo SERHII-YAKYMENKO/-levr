@@ -2,10 +2,22 @@
   padding: 90px 0 60px;
   background-color: $service;
 
+  @include r(1200) {
+    padding: 60px 0 30px;
+  }
+
+  @include r(768) {
+    padding: 40px 0 10px;
+  }
+
   &__list {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include r(992) {
+      flex-wrap: wrap;
+    }
   }
 
   &__item {
@@ -13,6 +25,24 @@
     padding: 0 30px;
     max-width: 25%;
     width: 100%;
+
+    @include r(1200) {
+      padding: 0 15px;
+    }
+
+    @include r(992) {
+      padding: 0 10px 50px;
+      max-width: 33.3333%;
+    }
+
+    @include r(768) {
+      max-width: 50%;
+    }
+
+    @include r(480) {
+      max-width: 100%;
+      padding: 0 0 50px;
+    }
 
     &::before {
       position: absolute;
@@ -55,6 +85,13 @@
     font-size: 2.2rem;
     line-height: 2.4rem;
     color: $title;
+
+    @include r(992) {
+      padding-top: 30px;
+      margin: 10px 0;
+      font-size: 2rem;
+      line-height: 2rem;
+    }
   }
 
   &__text {
