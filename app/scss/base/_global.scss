@@ -12,6 +12,9 @@ body {
 body {
   display: grid;
   grid-template-rows: auto 1fr auto;
+  // max-width: 100vw;
+  // min-width: 100vw;
+  // width: 100%;
   @extend %poppins-400;
   font-size: 1.6rem;
   line-height: 2.4rem;
@@ -53,7 +56,33 @@ a {
   font-size: 3.5rem;
   line-height: 3rem;
   color: $title;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__link {
+    position: relative;
+    padding-right: 40px;
+    margin-bottom: 75px;
+    @extend %poppins-500;
+    color: $accent;
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: 0;
+      right: 0;
+      padding: 12px;
+      background-image: url('../images/icons/arrow-accent.svg');
+    }
+  }
 }
+
+
+
 
 .subtitle {
   color: $subtitle;

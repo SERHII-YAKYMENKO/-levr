@@ -2,30 +2,6 @@
   padding: 150px 0;
   background-color: #fff;
 
-  &__top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  &__link {
-    position: relative;
-    padding-right: 40px;
-    margin-bottom: 75px;
-    @extend %poppins-500;
-    color: $accent;
-
-
-    &::after {
-      position: absolute;
-      content: '';
-      top: 0;
-      right: 0;
-      padding: 12px;
-      background-image: url('../images/icons/arrow-accent.svg');
-    }
-  }
-
   &__list {
 
     .slick-arrow {
