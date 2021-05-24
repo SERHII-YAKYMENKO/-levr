@@ -2,10 +2,10 @@
   position: relative;
 
   &__list {
+    position: relative;
+    margin: 0 auto;
     max-width: calc(100vw - 18px);
     width: 100%;
-    margin: 0 auto;
-    position: relative;
   }
 
   &__item {

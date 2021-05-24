@@ -5,6 +5,16 @@
   &__List {
     max-width: 100vw;
 
+    @include r(1660) {
+      max-width: calc(100vw - 38px);
+    }
+
+    // .slick-slide {
+    //   @include r(1660) {
+    //     max-width: calc(100vw - 18px);
+    //   }
+    // }
+
     .slick-dots {
       position: absolute;
       display: flex;

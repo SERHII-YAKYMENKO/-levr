@@ -3,14 +3,19 @@
   font-size: 1.8rem;
   line-height: 2.7rem;
   color: $placeholder;
-  
+
   &__signIn {
     padding: 20px;
-    margin-right: 20px;
+    margin-right: 18px;
     border-radius: 8px;
     @extend %poppins-600;
     background-color: #fff;
     transition: all 0.3s;
+
+    @include r(1200) {
+      padding: 20px 15px;
+      margin-right: 10px;
+    }
 
     &:hover {
       color: #fff;
@@ -19,9 +24,14 @@
   }
 
   &__create {
-    padding: 20px;
+    display: inline-block;
+    padding: 23px 26px;
     border-radius: 8px;
     color: #fff;
     background-color: $accent;
+
+    @include r(1200) {
+      padding: 20px 15px;
+    }
   }
 }

@@ -6,6 +6,166 @@
   @extend %poppins-500;
   font-size: 1.8rem;
   line-height: 2.7rem;
+  z-index: 999;
+
+  @include r(992) {
+    .box {
+      border-radius: 2px;
+      position: absolute;
+      top: 50%;
+      right: 25px;
+
+      &.fixed {
+        position: fixed;
+        top: 0;
+        right: 40px;
+        min-height: 110px;
+        z-index: 999;
+      }
+    }
+
+    .btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 50px;
+      cursor: pointer;
+    }
+
+    span {
+      display: block;
+      width: 100%;
+      box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3);
+      border-radius: 3px;
+      height: 8px;
+      background: $accent;
+      transition: all 0.3s;
+      position: relative;
+    }
+
+    span {
+      &:not(:last-child) {
+        margin-bottom: 13px;
+      }
+    }
+
+    .active span:nth-child(1) {
+      animation: ease 0.7s top forwards;
+    }
+
+    .not-active span:nth-child(1) {
+      animation: ease 0.7s top-2 forwards;
+    }
+
+    .active span:nth-child(2) {
+      animation: ease 0.7s scaled forwards;
+    }
+
+    .not-active span:nth-child(2) {
+      animation: ease 0.7s scaled-2 forwards;
+    }
+
+    .active span:nth-child(3) {
+      animation: ease 0.7s bottom forwards;
+    }
+
+    .not-active span:nth-child(3) {
+      animation: ease 0.7s bottom-2 forwards;
+    }
+
+    @keyframes top {
+      0% {
+        top: 0;
+        transform: rotate(0);
+      }
+
+      50% {
+        top: 22px;
+        transform: rotate(0);
+      }
+
+      100% {
+        top: 22px;
+        transform: rotate(45deg);
+      }
+    }
+
+    @keyframes top-2 {
+      0% {
+        top: 22px;
+        transform: rotate(45deg);
+      }
+
+      50% {
+        top: 22px;
+        transform: rotate(0deg);
+      }
+
+      100% {
+        top: 0;
+        transform: rotate(0deg);
+      }
+    }
+
+    @keyframes bottom {
+      0% {
+        bottom: 0;
+        transform: rotate(0);
+      }
+
+      50% {
+        bottom: 22px;
+        transform: rotate(0);
+      }
+
+      100% {
+        bottom: 22px;
+        transform: rotate(135deg);
+      }
+    }
+
+    @keyframes bottom-2 {
+      0% {
+        bottom: 22px;
+        transform: rotate(135deg);
+      }
+
+      50% {
+        bottom: 22px;
+        transform: rotate(0);
+      }
+
+      100% {
+        bottom: 0;
+        transform: rotate(0);
+      }
+    }
+
+    @keyframes scaled {
+      50% {
+        transform: scale(0);
+      }
+
+      100% {
+        transform: scale(0);
+      }
+    }
+
+    @keyframes scaled-2 {
+      0% {
+        transform: scale(0);
+      }
+
+      50% {
+        transform: scale(0);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+  }
 
   &__list {
     display: flex;
@@ -15,11 +175,9 @@
     background-color: $accent;
     opacity: 0;
     transition: all 0.3s;
-    z-index: -999;
 
     &--active {
       opacity: 1;
-      z-index: 999;
     }
   }
 
@@ -32,7 +190,7 @@
   &__link {
     position: relative;
     display: inline-block;
-    padding: 22px 20px;
+    padding: 21px 18px;
     min-width: 80px;
     min-height: 60px;
     color: $menu;
@@ -59,17 +217,22 @@
   &__dropdown {
     position: relative;
     padding: 20px 45px 20px 20px;
+    margin-left: 83px;
     border-radius: 8px;
     @extend %poppins-600;
     font-size: 1.8rem;
     line-height: 2.7rem;
     color: $accent;
 
+    @include r(1200) {
+      margin-left: 15px;
+    }
+
     &::after {
       position: absolute;
       content: '';
       top: 30px;
-      right: 15px;
+      right: 10px;
       width: 13px;
       height: 7px;
       transform: translate(-50%);
@@ -79,11 +242,13 @@
     }
 
     &--active {
+      position: relative;
       color: #fff;
       background-color: $accent;
+      z-index: 100;
 
       &::after {
-        right: 20px;
+        right: 18px;
         transform: rotate(180deg);
         background-image: url('../images/icons/arrow-white.svg');
       }
@@ -92,11 +257,11 @@
         position: absolute;
         content: '';
         bottom: -22px;
-        right: 57px;
-        width: 13px;
-        height: 7px;
+        right: 50px;
+        width: 16px;
+        height: 10px;
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;
         background-image: url('../images/icons/arrow.svg');
         transform: rotate(180deg) translateY(-50%);
       }
@@ -112,7 +277,6 @@
   width: 100%;
   height: 100%;
   overflow: auto;
-  // background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
   z-index: 100;
 }

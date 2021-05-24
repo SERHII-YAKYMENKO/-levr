@@ -1,32 +1,46 @@
 .search {
   &__top {
     position: relative;
-    margin-left: -3%;
+    padding: 0 10px;
+    margin-right: 45px;
     @extend %poppins-400;
     font-size: 1.8rem;
     line-height: 2.7rem;
+
+    @include r(1200) {
+      margin-right: 15px;
+    }
 
     &::placeholder {
       color: $placeholder;
     }
 
     input {
-      padding: 20px 60px 20px 40px;
-      min-width: 763px;
+      padding: 20px 60px 20px 35px;
+      max-width: 100%;
+      width: 40vw;
       border-radius: 8px;
       border: none;
       background-color: $input;
+
+      @include r(1440) {
+        padding: 20px 40px 20px 20px;
+        width: 30vw;
+      }
     }
 
     button {
       position: absolute;
       top: 33px;
-      right: 28px;
-      width: 24px;
-      height: 24px;
+      right: 40px;
+      padding: 12px;
       transform: translateY(-50%);
       background-repeat: no-repeat;
       background-image: url('../images/icons/search.svg');
+
+      @include r(1440) {
+        right: 20px;
+      }
     }
   }
 }
