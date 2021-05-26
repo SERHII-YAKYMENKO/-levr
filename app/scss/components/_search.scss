@@ -27,6 +27,10 @@
         padding: 20px 40px 20px 20px;
         width: 30vw;
       }
+
+      @include r(992) {
+        width: 40vw;
+      }
     }
 
     button {
@@ -40,6 +44,11 @@
 
       @include r(1440) {
         right: 20px;
+      }
+
+      @include r(992) {
+        // top: 5px;
+        // right: -230px;
       }
     }
   }

@@ -7,9 +7,9 @@
   }
 
   &__list {
+    margin: 0 auto;
     max-width: calc(100vw - 18px);
     width: 100%;
-    margin: 0 auto;
 
     @include r(1700) {
       max-width: 94vw;
@@ -36,10 +36,18 @@
       transform: translateY(-50%);
       box-shadow: 0px 14px 26px 0px #270D3040;
       z-index: 1;
+
+      @include r(768) {
+        right: 0;
+      }
     }
 
     .slick-prev {
       left: -28px;
+
+      @include r(768) {
+        left: 0;
+      }
     }
 
     .slick-next,
@@ -79,6 +87,10 @@
     @include r(1200) {
       max-width: 450px;
     }
+
+    @include r(768) {
+      margin: 0 auto;
+    }
   }
 
   &__img-box {
@@ -106,6 +118,10 @@
     }
   }
 
+  &__content {
+    position: relative;
+  }
+
   &__category-box {
     display: flex;
     align-items: center;
@@ -113,6 +129,10 @@
 
     @include r(1440) {
       margin-bottom: 20px;
+    }
+
+    @include r(992) {
+      margin-bottom: 10px;
     }
   }
 
@@ -129,6 +149,10 @@
       margin-right: 10px;
     }
 
+    @include r(992) {
+      padding: 10px;
+    }
+
     &:hover {
       color: #fff;
       background-color: $accent;
@@ -139,6 +163,10 @@
     padding: 11px 20px;
     border-radius: 10px;
     background-color: #FFD782;
+
+    @include r(992) {
+      padding: 10px;
+    }
   }
 
   &__star {
@@ -147,7 +175,7 @@
     &::after {
       position: absolute;
       content: '';
-      top: 13px;
+      top: 11px;
       left: -3px;
       transform: translateY(-50%);
       padding: 9px;
@@ -172,6 +200,12 @@
       font-size: 2.2rem;
       line-height: 2.8rem;
     }
+
+    @include r(992) {
+      margin-bottom: 10px;
+      font-size: 1.8rem;
+      line-height: 2.2rem;
+    }
   }
 
   &__autor {
@@ -184,16 +218,30 @@
     @include r(1700) {
       margin-bottom: 20px;
     }
+
+    @include r(992) {
+      margin-bottom: 10px;
+      font-size: 1.6rem;
+      line-height: 2rem;
+    }
   }
 }
 
 .price {
+  position: absolute;
   display: flex;
   align-items: center;
+  bottom: 0;
+  right: 0;
+  left: 0;
   padding: 17px 25px;
   border-radius: 10px;
   color: $accent;
   transition: all ease-in-out 0.3s;
+
+  @include r(992) {
+    padding: 10px;
+  }
 
   &:hover {
     background-color: $accent;
@@ -209,6 +257,11 @@
     @extend %poppins-600;
     font-size: 3rem;
     line-height: 2.4rem;
+
+    @include r(992) {
+      margin-right: 10px;
+      font-size: 2.4rem;
+    }
   }
 
   &__old {

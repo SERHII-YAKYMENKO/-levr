@@ -1,5 +1,5 @@
 $(function () {
-  
+
   var btn = $('.btn');
 
   btn.on('click', function () {
@@ -10,6 +10,7 @@ $(function () {
   $('.box').on('click', function () {
     $('.menu__list').toggleClass('menu__list--active')
   });
+
 
   $(".star").rateYo({
     starWidth: "15px",
@@ -35,12 +36,20 @@ $(function () {
     nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><style>.a{stroke-linejoin:round;stroke-width:2;stroke:#8D28AD;}</style><path d="M5 12H19" class="a"/><path d="M12 5L19 12 12 19" class="a"/></svg></button>',
     infinite: false,
     responsive: [{
-      breakpoint: 1200,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-      }
-    }, ]
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      },
+    ]
   });
 
   $('.categories__List').slick({
@@ -48,6 +57,34 @@ $(function () {
     slidesToScroll: 3,
     arrows: false,
     dots: true,
+    responsive: [{
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 4,
+        }
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: false,
+        }
+      },
+    ]
   });
 
   $('.menu__dropdown').on('click', function () {

@@ -64,12 +64,16 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 75px;
+
+    @include r(1200) {
+      margin-bottom: 5%;
+    }
   }
 
   &__link {
     position: relative;
     padding-right: 40px;
-    margin-bottom: 75px;
     @extend %poppins-500;
     color: $accent;
 

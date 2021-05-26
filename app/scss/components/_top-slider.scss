@@ -12,16 +12,8 @@
     min-height: calc(100vh - 180px);
     color: #fff;
 
-    @include r(1200) {
-      min-height: calc(80vh - 180px);
-    }
-
-    @include r(992) {
-      min-height: calc(70vh - 180px);
-    }
-
-    @include r(768) {
-      min-height: calc(65vh - 180px);
+    @include r(1440) {
+      min-height: 50vw;
     }
   }
 

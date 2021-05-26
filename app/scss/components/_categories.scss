@@ -3,17 +3,12 @@
   background-color: #fff;
 
   &__List {
+    margin: 0 -10px;
     max-width: 100vw;
 
-    @include r(1660) {
+    @include r(1700) {
       max-width: calc(100vw - 38px);
     }
-
-    // .slick-slide {
-    //   @include r(1660) {
-    //     max-width: calc(100vw - 18px);
-    //   }
-    // }
 
     .slick-dots {
       position: absolute;
@@ -47,10 +42,14 @@
     }
   }
 
+  .slick-slide {
+    padding: 0 9px;
+  }
+
   &__item {
     position: relative;
-    max-width: 313px;
-    min-height: 151px;
+    padding: 0 50% 48.5%;
+    height: 0;
     border-radius: 10px;
     color: #fff;
     background-color: #8d28ada6;
@@ -78,6 +77,11 @@
     font-size: 2rem;
     line-height: 3rem;
 
+    @include r(1440) {
+      padding-top: 15%;
+      font-size: 1.8rem;
+      line-height: 2.4rem;
+    }
   }
 
   &__amount {
