@@ -3,7 +3,7 @@
   background-color: #fff;
 
   &__List {
-    margin: 0 -10px;
+    margin: 0 -24px;
     max-width: 100vw;
 
     @include r(1700) {
@@ -43,12 +43,15 @@
   }
 
   .slick-slide {
-    padding: 0 9px;
+    // padding-left: 12px;
+    margin: 0 14px;
   }
 
   &__item {
     position: relative;
-    padding: 0 50% 48.5%;
+    margin: 0 0;
+    padding: 0 51.5% 50%;
+    // padding: 0 50.5% 48.5%;
     height: 0;
     border-radius: 10px;
     color: #fff;
@@ -70,8 +73,8 @@
   }
 
   &__name {
-    padding-top: 50px;
-    padding-left: 30px;
+    padding-top: 55px;
+    padding-left: 35px;
     margin-bottom: 10px;
     @extend %poppins-600;
     font-size: 2rem;

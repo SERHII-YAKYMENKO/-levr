@@ -9,10 +9,10 @@
   }
 
   &__item {
-    min-height: calc(100vh - 180px);
+    min-height: calc(100vh - 149px);
     color: #fff;
 
-    @include r(1440) {
+    @include r(1200) {
       min-height: 50vw;
     }
   }
@@ -31,17 +31,22 @@
     border-radius: 37px;
     background-color: #ffffff40;
 
+    @include r(1200) {
+      margin: 6% 0 30px;
+    }
+
     @include r(768) {
       display: none;
     }
 
     span {
+      padding: 11px 34px;
       margin-right: 25px;
-      padding: 5px 42px;
       border-radius: 37px;
       @extend %poppins-600;
       font-size: 1.8rem;
       line-height: 2.7rem;
+      text-transform: uppercase;
       background-color: $background2;
 
       @include r(1200) {
@@ -69,7 +74,7 @@
     }
 
     @include r(768) {
-      margin-top: 10%;
+      margin-top: 5%;
       font-size: 2.6rem;
       line-height: 3rem;
     }
@@ -83,8 +88,9 @@
   }
 
   &__btn {
-    position: relative;
-    padding: 24px 100px 24px 20px;
+    position: absolute;
+    bottom: 27%;
+    padding: 20px 130px 20px 30px;
     border-radius: 8px;
     @extend %poppins-600;
     font-size: 2rem;
@@ -93,20 +99,29 @@
     box-shadow: 0 0 42px 10px rgba(62, 0, 82, 0.72);
 
     @include r(1200) {
+      bottom: 15%;
       padding: 20px 60px 20px 20px;
+    }
+
+    @include r(992) {
+      padding: 15px;
     }
 
     &::after {
       position: absolute;
       content: '';
       top: 35px;
-      right: 20px;
+      right: 30px;
       padding: 12px;
       transform: translateY(-50%);
       background-image: url('../images/icons/arrow-right.svg');
 
       @include r(1200) {
-        top: 32px;
+        top: 35px;
+      }
+
+      @include r(992) {
+        display: none;
       }
     }
   }
@@ -117,8 +132,12 @@
     justify-content: center;
     left: 0;
     right: 0;
-    bottom: 30px;
+    bottom: 47px;
     transform: translateY(-50%);
+
+    @include r(1200) {
+      bottom: 15px;
+    }
   }
 
   li {

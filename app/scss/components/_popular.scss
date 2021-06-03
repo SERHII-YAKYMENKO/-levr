@@ -1,5 +1,5 @@
 .popular {
-  padding: 150px 0;
+  padding: 160px 0 150px;
   background-color: #fff;
 
   @include r(1200) {
@@ -7,7 +7,8 @@
   }
 
   &__list {
-    margin: 0 auto;
+    // margin: 0 -30px;
+    // margin-left: -30px;
     max-width: calc(100vw - 18px);
     width: 100%;
 
@@ -20,6 +21,8 @@
     }
 
     .slick-slide {
+      // margin: 0 20px;
+
       @include r(1700) {
         margin-right: 15px;
       }
@@ -72,6 +75,7 @@
 
   &__item {
     display: flex !important;
+    // margin-left: 70px;
     max-width: 515px;
     width: 100%;
     overflow: hidden;
@@ -224,49 +228,5 @@
       font-size: 1.6rem;
       line-height: 2rem;
     }
-  }
-}
-
-.price {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  padding: 17px 25px;
-  border-radius: 10px;
-  color: $accent;
-  transition: all ease-in-out 0.3s;
-
-  @include r(992) {
-    padding: 10px;
-  }
-
-  &:hover {
-    background-color: $accent;
-    color: #fff;
-
-    .price__old {
-      color: #fff;
-    }
-  }
-
-  &__curent {
-    margin-right: 22px;
-    @extend %poppins-600;
-    font-size: 3rem;
-    line-height: 2.4rem;
-
-    @include r(992) {
-      margin-right: 10px;
-      font-size: 2.4rem;
-    }
-  }
-
-  &__old {
-    text-decoration: line-through;
-    color: $placeholder;
-    transition: all ease-in-out 0.3s;
   }
 }

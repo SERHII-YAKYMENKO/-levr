@@ -11,11 +11,19 @@ $(function () {
     $('.menu__list').toggleClass('menu__list--active')
   });
 
-
   $(".star").rateYo({
     starWidth: "15px",
     spacing: "5px",
     normalFill: "none",
+    ratedFill: "#FF7A00",
+    readOnly: true,
+    "starSvg": '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="13" viewBox="0 0 16 13" fill="none"><path d="M7.4 0.5L5.6 3.8 1.6 4.4C0.9 4.5 0.6 5.3 1.1 5.7L4 8.4 3.4 12C3.2 12.7 4 13.2 4.6 12.9L8.2 11.2 11.8 12.9C12.5 13.2 13.2 12.7 13.1 12L12.4 8.4 15.3 5.7C15.9 5.3 15.6 4.5 14.8 4.4L10.8 3.8 9 0.5C8.7-0.1 7.8-0.2 7.4 0.5Z"/></svg>',
+  });
+
+  $(".star__featured").rateYo({
+    starWidth: "15px",
+    spacing: "5px",
+    normalFill: "#E0E0E0",
     ratedFill: "#FF7A00",
     readOnly: true,
     "starSvg": '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="13" viewBox="0 0 16 13" fill="none"><path d="M7.4 0.5L5.6 3.8 1.6 4.4C0.9 4.5 0.6 5.3 1.1 5.7L4 8.4 3.4 12C3.2 12.7 4 13.2 4.6 12.9L8.2 11.2 11.8 12.9C12.5 13.2 13.2 12.7 13.1 12L12.4 8.4 15.3 5.7C15.9 5.3 15.6 4.5 14.8 4.4L10.8 3.8 9 0.5C8.7-0.1 7.8-0.2 7.4 0.5Z"/></svg>',
@@ -26,6 +34,15 @@ $(function () {
     // autoplay: true,
     // autoplaySpeed: 10000,
     dots: true,
+  });
+
+  $('.product-top__list').slick({
+    slidesToShow: 6,
+    slidesToScroll: 2,
+    arrows: true,
+    prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><style>.a{stroke-linejoin:round;stroke-width:2;stroke:#8D28AD;}</style><path d="M19 12H5" class="a"/><path d="M12 5L5 12 12 19" class="a"/></svg></button>',
+    nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><style>.a{stroke-linejoin:round;stroke-width:2;stroke:#8D28AD;}</style><path d="M5 12H19" class="a"/><path d="M12 5L19 12 12 19" class="a"/></svg></button>',
+    infinite: false,
   });
 
   $('.popular__list').slick({
@@ -91,7 +108,6 @@ $(function () {
     $('.menu__list').toggleClass('menu__list--active')
     $('.menu__dropdown').toggleClass('menu__dropdown--active')
   });
-
 });
 
 // Get the modal

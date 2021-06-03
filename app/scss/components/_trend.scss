@@ -1,6 +1,10 @@
 .trend {
-  padding: 8% 0;
+  padding: 150px 0 130px;
   background-color: #fff;
+
+  @include r(1200) {
+    padding: 8% 0;
+  }
 
   &__list {
     display: flex;
@@ -13,11 +17,14 @@
   }
 
   &__item {
-    padding: 0 15px;
     position: relative;
     max-width: 274px;
     width: 100%;
     background-color: transparent;
+
+    @include r(1440) {
+      padding: 0 15px;
+    }
 
     @include r(992) {
       margin-bottom: 25px;
@@ -28,7 +35,7 @@
     position: relative;
     overflow: hidden;
     padding: 0 50% 143%;
-    margin-bottom: 12.5%;
+    margin-bottom: 14%;
     border-radius: 20px;
     height: 0;
 
@@ -160,11 +167,11 @@
 
   &__price {
     position: absolute;
-    bottom: 0;
+    bottom: 18px;
     left: auto;
     right: auto;
     transform: translateX(-50%);
-    padding: 17px 25px;
+    padding: 16px 30px;
     border: 1px solid $social-border;
     border-radius: 10px;
     @extend %poppins-600;

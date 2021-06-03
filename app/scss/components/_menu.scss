@@ -22,11 +22,7 @@
     transition: all 0.3s;
 
     @include r(992) {
-      // position: absolute;
       display: block;
-      // top: 85px;
-      // right: 0;
-      // left: 0;
       background-color: $accent;
       z-index: 999;
     }
