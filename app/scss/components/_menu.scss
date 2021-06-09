@@ -6,6 +6,7 @@
   @extend %poppins-500;
   font-size: 1.8rem;
   line-height: 2.7rem;
+  pointer-events: none;
   z-index: 999;
 
   @include r(992) {
@@ -20,15 +21,16 @@
     background-color: $accent;
     opacity: 0;
     transition: all 0.3s;
+    pointer-events: none;
 
     @include r(992) {
       display: block;
       background-color: $accent;
-      z-index: 999;
     }
 
     &--active {
       opacity: 1;
+      pointer-events: auto
     }
   }
 
@@ -51,10 +53,16 @@
     color: $menu;
     transition: all 0.3s;
 
-     @include r(992) {
-       padding: 15px;
-       min-height: 50px;
-     }
+    @include r(992) {
+      padding: 15px;
+      min-height: 50px;
+    }
+
+    @include r(768) {
+      padding: 8px 10px;
+      min-height: 40px;
+    }
+
     &:hover {
       color: #fff;
 

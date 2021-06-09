@@ -26,7 +26,7 @@
   &__hot {
     display: inline-flex;
     align-items: center;
-    margin: 11.15% 0 30px;
+    margin: 16.75vh 0 3vh;
     padding: 0 70px 0 0;
     border-radius: 37px;
     background-color: #ffffff40;
@@ -81,16 +81,21 @@
   }
 
   &__text {
-    margin-bottom: 50px;
+    margin-bottom: 5vh;
     max-width: 590px;
     width: 100%;
     color: #fffc;
+
+    @include r(480) {
+      display: none;
+    }
   }
 
   &__btn {
-    position: absolute;
-    bottom: 27%;
+    position: relative;
+    display: inline-block;
     padding: 20px 130px 20px 30px;
+    margin-bottom: 5vh;
     border-radius: 8px;
     @extend %poppins-600;
     font-size: 2rem;
@@ -99,7 +104,6 @@
     box-shadow: 0 0 42px 10px rgba(62, 0, 82, 0.72);
 
     @include r(1200) {
-      bottom: 15%;
       padding: 20px 60px 20px 20px;
     }
 
@@ -132,11 +136,15 @@
     justify-content: center;
     left: 0;
     right: 0;
-    bottom: 47px;
+    bottom: 4vh;
     transform: translateY(-50%);
 
     @include r(1200) {
-      bottom: 15px;
+      bottom: 2vh;
+    }
+
+    @include r(992) {
+      bottom: 0;
     }
   }
 
@@ -159,6 +167,10 @@
     button {
       padding: 3px 30px;
       background-color: #fff;
+
+      @include r(480) {
+        padding: 3px 15px;
+      }
     }
   }
 }

@@ -1,8 +1,12 @@
 .featured {
-  padding: 147px 0;
+  padding: 160px 0;
   max-width: calc(100vw - 18px);
   background-color: #fff;
   overflow: hidden;
+
+  @include r(1440) {
+    padding: 8% 0;
+  }
 
   &__list {
     position: relative;
@@ -67,12 +71,17 @@
     overflow: hidden;
   }
 
-  &__img-box {
+  &__link {
     position: relative;
+    display: block;
+    max-width: 270px;
+    width: 100%;
+    height: 386px;
     overflow: hidden;
-    padding: 0 14.5% 41%;
-    margin-right: 80px;
-    height: 0;
+    margin-right: 9.5%;
+    // padding: 0 16.5% 46%;
+    // margin-right: 80px;
+    // height: 0;
     border-radius: 20px;
 
     img {
@@ -94,14 +103,25 @@
     position: relative;
 
     .price {
-      position: relative;
-      margin-left: 25px;
+      bottom: 65px;
+      left: -14px;
+    }
+
+    .price__curent {
+      font-size: 3.6rem;
+      line-height: 1.4;
+    }
+
+    .price__old {
+      margin-top: 5px;
+      font-size: 2rem;
+      line-height: 1.4;
     }
   }
 
   &__category {
-    padding: 11px 25px;
-    margin-right: 34px;
+    padding: 12px 24px;
+    margin-right: 30px;
     border-radius: 10px;
     color: $accent;
     background-color: #8d28ad26;
@@ -128,7 +148,7 @@
 
   &__text {
     margin-bottom: 45px;
-    max-width: 471px;
+    max-width: 470px;
     width: 100%;
     color: #00000080;
   }
@@ -142,7 +162,7 @@
   &__btn {
     position: relative;
     padding: 26px 30px 26px 70px;
-    margin-right: 30px;
+    margin-right: 25px;
     border-radius: 8px;
     color: #fff;
     background-color: $accent;
@@ -150,8 +170,8 @@
     &::after {
       position: absolute;
       content: '';
-      top: 33px;
-      left: 20px;
+      top: 34px;
+      left: 29px;
       padding: 10px 12px 11px;
       transform: translateY(-50%);
       background-repeat: no-repeat;
@@ -168,7 +188,7 @@
     &::after {
       position: absolute;
       content: '';
-      top: 34px;
+      top: 33px;
       left: 21px;
       width: 31px;
       height: 27px;

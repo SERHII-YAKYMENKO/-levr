@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1">
+  <meta name="msapplication-tap-highlight" content="no" />
   <!-- <meta http-equiv="Cache-control" content="no-cache"> -->
   <title>Clevr</title>
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
@@ -11,6 +12,12 @@
 </head>
 
 <body>
+  <div class="preloader">
+    <div class="preloader__row">
+      <div class="preloader__item"></div>
+      <div class="preloader__item"></div>
+    </div>
+  </div>
   <header class="header">
     <div class="container">
       <div class="anchor"></div>
@@ -85,7 +92,7 @@
     <h1></h1>
     <section class="top-slider">
       <div class="top-slider__list">
-        <div class="top-slider__item">
+        <div class="top-slider__item" style="background-color: rgba(67, 13, 84, 0.73)">
           <div class="top-slider__img-box">
             <img class="top-slider__img" src="images/top-1.jpg" alt="#">
           </div>
@@ -107,7 +114,7 @@
             </a>
           </div>
         </div>
-        <div class="top-slider__item">
+        <div class="top-slider__item" style="background-color: rgba(67, 13, 84, 0.73)">
           <img class="top-slider__img" src="images/top-1.jpg" alt="#">
           <div class="container">
             <div class="top-slider__hot">
@@ -127,7 +134,7 @@
             </a>
           </div>
         </div>
-        <div class="top-slider__item">
+        <div class="top-slider__item" style="background-color: rgba(67, 13, 84, 0.73)">
           <img class="top-slider__img" src="images/top-1.jpg" alt="#">
           <div class="container">
             <div class="top-slider__hot">
@@ -899,11 +906,9 @@
       </div>
       <div class="featured__list">
         <div class="featured__item">
-          <div class="featured__img-box">
-            <a class="featured__link" href="#">
-              <img src="https://picsum.photos/400/600" alt="#">
-            </a>
-          </div>
+          <a class="featured__link" href="#">
+            <img src="https://picsum.photos/400/600" alt="#">
+          </a>
           <div class="featured__content">
             <div class="featured__category-box">
               <a class="featured__category" href="#">
@@ -942,11 +947,49 @@
           </div>
         </div>
         <div class="featured__item">
-          <div class="featured__img-box">
-            <a class="featured__link" href="#">
-              <img src="https://picsum.photos/400/600" alt="#">
-            </a>
+          <a class="featured__link" href="#">
+            <img src="https://picsum.photos/400/600" alt="#">
+          </a>
+          <div class="featured__content">
+            <div class="featured__category-box">
+              <a class="featured__category" href="#">
+                Biography
+              </a>
+              <div class="star__featured" data-rateyo-rating="4"></div>
+              <div class="featured__reviews">
+                459 Reviews
+              </div>
+            </div>
+            <p class="featured__name">
+              Emily and the Backbone
+            </p>
+            <p class="featured__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua.
+            </p>
+            <button class="price" type="submit">
+              <p class="price__curent">
+                $19,23
+              </p>
+              <p class="price__old">
+                $20,99
+              </p>
+            </button>
+            <div class="featured__add">
+              <button class="featured__btn" type="submit">
+                Add to cart
+              </button>
+              <button class="featured__liks" type="submit"></button>
+              <a class="featured__details" href="#">
+                View Details
+              </a>
+            </div>
           </div>
+        </div>
+        <div class="featured__item">
+          <a class="featured__link" href="#">
+            <img src="https://picsum.photos/400/600" alt="#">
+          </a>
           <div class="featured__content">
             <div class="featured__category-box">
               <a class="featured__category" href="#">
@@ -985,54 +1028,9 @@
           </div>
         </div>
         <div class="featured__item">
-          <div class="featured__img-box">
-            <a class="featured__link" href="#">
-              <img src="https://picsum.photos/400/600" alt="#">
-            </a>
-          </div>
-          <div class="featured__content">
-            <div class="featured__category-box">
-              <a class="featured__category" href="#">
-                Biography
-              </a>
-              <div class="star__featured" data-rateyo-rating="4"></div>
-              <div class="featured__reviews">
-                459 Reviews
-              </div>
-            </div>
-            <p class="featured__name">
-              Emily and the Backbone
-            </p>
-            <p class="featured__text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna
-              aliqua.
-            </p>
-            <button class="price" type="submit">
-              <p class="price__curent">
-                $19,23
-              </p>
-              <p class="price__old">
-                $20,99
-              </p>
-            </button>
-            <div class="featured__add">
-              <button class="featured__btn" type="submit">
-                Add to cart
-              </button>
-              <button class="featured__liks" type="submit"></button>
-              <a class="featured__details" href="#">
-                View Details
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="featured__item">
-          <div class="featured__img-box">
-            <a class="featured__link" href="#">
-              <img src="https://picsum.photos/400/600" alt="#">
-            </a>
-          </div>
+          <a class="featured__link" href="#">
+            <img src="https://picsum.photos/400/600" alt="#">
+          </a>
           <div class="featured__content">
             <div class="featured__category-box">
               <a class="featured__category" href="#">
@@ -1227,7 +1225,7 @@
       <div class="container">
         <div class="copyright__inner">
           <p>CLEVR - © 2021 All Rights Reserved</p>
-          <p>Made with ♥ by Peterdraw</p>
+          <p>Made with by Peterdraw</p>
         </div>
       </div>
     </div>
