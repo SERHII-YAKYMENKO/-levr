@@ -7,10 +7,7 @@
   }
 
   &__list {
-    // margin: 0 -30px;
-    // margin-left: -30px;
-    max-width: calc(100vw - 18px);
-    width: 100%;
+    margin: 0 auto;
 
     @include r(1700) {
       max-width: 94vw;
@@ -21,16 +18,21 @@
     }
 
     .slick-slide {
-      // margin: 0 20px;
+      margin: 0 30px;
+    }
 
-      @include r(1700) {
-        margin-right: 15px;
+    .slick-list {
+      margin-left: -30px;
+      margin-right: -30px;
+
+      @include r(1440) {
+        margin: 0;
       }
     }
 
     .slick-arrow {
       position: absolute;
-      top: 55%;
+      top: 54%;
       right: -28px;
       max-width: 58px;
       width: 100%;
@@ -74,34 +76,16 @@
   }
 
   &__item {
-    display: flex !important;
-    // margin-left: 70px;
-    max-width: 515px;
-    width: 100%;
-    overflow: hidden;
-
-    @include r(1700) {
-      max-width: 450px;
-    }
-
-    @include r(1440) {
-      max-width: 400px;
-    }
-
-    @include r(1200) {
-      max-width: 450px;
-    }
-
-    @include r(768) {
-      margin: 0 auto;
-    }
+    position: relative;
+    min-width: 515px;
   }
 
   &__img-box {
+    float: left;
     position: relative;
     overflow: hidden;
-    padding: 0 19.5% 55%;
-    margin-right: 38px;
+    padding: 0 19.5% 56%;
+    margin-right: 36px;
     height: 0;
     border-radius: 20px;
 
@@ -123,15 +107,14 @@
   }
 
   &__content {
-    position: relative;
+    display: inline-block;
+    max-width: 277px;
   }
 
   &__category-box {
-    display: flex;
-    align-items: center;
     margin-bottom: 30px;
 
-    @include r(1440) {
+    @include r(1700) {
       margin-bottom: 20px;
     }
 
@@ -164,6 +147,7 @@
   }
 
   &__rating {
+    display: inline-block;
     padding: 11px 20px;
     border-radius: 10px;
     background-color: #FFD782;
@@ -203,6 +187,11 @@
     @include r(1700) {
       font-size: 2.2rem;
       line-height: 2.8rem;
+    }
+
+    @include r(1440) {
+      font-size: 2rem;
+      line-height: 2.2rem;
     }
 
     @include r(992) {

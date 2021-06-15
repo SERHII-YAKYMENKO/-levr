@@ -32,12 +32,21 @@
     }
 
     @include r(992) {
-      padding: 0 10px 50px;
+      padding: 0 10px;
       max-width: 50%;
+
+      &:not(:last-child) {
+        padding-bottom: 50px;
+      }
     }
 
     @include r(480) {
-      padding: 0 0 40px;
+      padding: 0;
+
+      &:not(:last-child) {
+        padding-bottom: 40px;
+      }
+
       max-width: 100%;
     }
 

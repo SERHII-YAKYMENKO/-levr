@@ -2,15 +2,14 @@
   position: absolute;
   display: flex;
   align-items: center;
-  bottom: 30px;
-  left: -25px;
-  padding: 15px;
-  border-radius: 10px;
+  bottom: 37px;
+  left: 240px;
+  transform: translateY(-50%);
   color: $accent;
 
-  @include r(992) {
-    padding: 10px;
-  }
+  // @include r(1200) {
+  //   bottom: 0;
+  // }
 
   &__curent {
     @extend %poppins-600;

@@ -53,7 +53,7 @@ $(function () {
     nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><style>.a{stroke-linejoin:round;stroke-width:2;stroke:#8D28AD;}</style><path d="M5 12H19" class="a"/><path d="M12 5L19 12 12 19" class="a"/></svg></button>',
     infinite: false,
     responsive: [{
-        breakpoint: 1200,
+        breakpoint: 1440,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
@@ -74,6 +74,7 @@ $(function () {
     slidesToScroll: 3,
     arrows: false,
     dots: true,
+    variableWidth: true,
     responsive: [{
         breakpoint: 1200,
         settings: {
@@ -145,10 +146,42 @@ window.onclick = function (event) {
   }
 }
 
-  window.onload = function () {
-    document.body.classList.add('loaded_hiding');
-    window.setTimeout(function () {
-      document.body.classList.add('loaded');
-      document.body.classList.remove('loaded_hiding');
-    }, 500);
-  }
+window.onload = function () {
+  document.body.classList.add('loaded_hiding');
+  window.setTimeout(function () {
+    document.body.classList.add('loaded');
+    document.body.classList.remove('loaded_hiding');
+  }, 500);
+}
+
+//anchor
+var StickyElement = function (node) {
+  var doc = $(document),
+    fixed = false,
+    anchor = node.find('.anchor'),
+    content = node.find('.header__inner, .menu__list, .menu__list--active');
+
+  var onScroll = function (e) {
+    var docTop = doc.scrollTop(),
+      anchorTop = anchor.offset().top;
+
+    console.log('scroll', docTop, anchorTop);
+    if (docTop > anchorTop) {
+      if (!fixed) {
+        anchor.height(content.outerHeight());
+        content.addClass('fixed');
+        fixed = true;
+      }
+    } else {
+      if (fixed) {
+        anchor.height(0);
+        content.removeClass('fixed');
+        fixed = false;
+      }
+    }
+  };
+
+  $(window).on('scroll', onScroll);
+};
+
+var demo = new StickyElement($('#fixed'));

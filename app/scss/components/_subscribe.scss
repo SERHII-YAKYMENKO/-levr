@@ -4,6 +4,10 @@
   background-color: $accent;
   overflow: hidden;
 
+  @include r(1200) {
+    padding: 4% 0;
+  }
+
   &::before {
     position: absolute;
     content: '';
@@ -12,12 +16,20 @@
     padding: 75px;
     background-repeat: no-repeat;
     background-image: url('../images/icons/squareBig.svg');
+
+    @include r(992) {
+      display: none;
+    }
   }
 
   &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include r(992) {
+      display: block;
+    }
   }
 
   &__title {
@@ -25,8 +37,30 @@
     max-width: 540px;
     width: 100%;
     font-size: 4rem;
-    line-height: 6rem;
+    line-height: 5.5rem;
     color: #fff;
+
+    @include r(1440) {
+      max-width: 490px;
+      font-size: 3.6rem;
+      line-height: 4.8rem;
+    }
+
+    @include r(992) {
+      text-align: center;
+      margin: 0 auto 25px;
+    }
+
+    @include r(768) {
+      font-size: 3rem;
+      line-height: 4rem;
+    }
+
+    @include r(480) {
+      font-size: 2.8rem;
+      line-height: 3.2rem;
+      margin: 0 auto 15px;
+    }
 
     &::before {
       position: absolute;
@@ -36,22 +70,44 @@
       padding: 30px;
       background-repeat: no-repeat;
       background-image: url('../images/icons/square.svg');
+
+      @include r(992) {
+        display: none;
+      }
     }
   }
 
   .form {
+    @include r(992) {
+      text-align: center;
+    }
 
     &__input {
+      padding: 10px 10px 10px 33px;
       min-width: 488px;
+      width: 100%;
       background-color: #f3f3f329;
+
+      @include r(768) {
+        max-width: 488px;
+        width: 100%;
+        min-width: auto;
+      }
     }
 
     &__btn {
       padding: 20px 36px;
+      margin-left: 10px;
       text-transform: uppercase;
       @extend %poppins-600;
       color: $accent;
       background-color: #fff;
+
+      @include r(1200) {
+        margin-left: 0;
+        max-width: 488px;
+        width: 100%;
+      }
     }
   }
 }

@@ -10,7 +10,11 @@
   z-index: 999;
 
   @include r(992) {
-    top: 85px;
+    top: 105px;
+  }
+
+  @include r(768) {
+    top: 80px;
   }
 
   &__list {
@@ -20,8 +24,18 @@
     text-align: center;
     background-color: $accent;
     opacity: 0;
-    transition: all 0.3s;
+    transition: all 0.3s ease-in-out;
     pointer-events: none;
+
+    &.fixed {
+      position: fixed;
+      top: 105px;
+      right: 0;
+      left: 0;
+      width: 100%;
+      min-height: 69px;
+      z-index: 999;
+    }
 
     @include r(992) {
       display: block;
@@ -30,7 +44,24 @@
 
     &--active {
       opacity: 1;
-      pointer-events: auto
+      pointer-events: auto;
+
+      &::before {
+        position: absolute;
+        content: '';
+        top: -21%;
+        left: 24.5%;
+        width: 16px;
+        height: 10px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url('../images/icons/arrow.svg');
+        transform: rotate(180deg) translateY(-50%);
+
+        @include r(992) {
+          display: none;
+        }
+      }
     }
   }
 
@@ -122,19 +153,6 @@
         right: 18px;
         transform: rotate(180deg);
         background-image: url('../images/icons/arrow-white.svg');
-      }
-
-      &::before {
-        position: absolute;
-        content: '';
-        bottom: -22px;
-        right: 50px;
-        width: 16px;
-        height: 10px;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-image: url('../images/icons/arrow.svg');
-        transform: rotate(180deg) translateY(-50%);
       }
     }
   }

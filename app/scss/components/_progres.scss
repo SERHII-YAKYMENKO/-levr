@@ -1,23 +1,37 @@
 .progres {
-  padding: 100px 0;
+  padding: 116px 0 100px;
   background-color: $bg-progres;
 
+  @include r(1200) {
+    padding: 4% 0;
+  }
+
   &__list {
+    margin: 0 auto;
+    max-width: 1220px;
+    width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+
+    @include r(1200) {
+      justify-content: center;
+    }
   }
 
   &__item {
     position: relative;
-    padding: 0 15px;
+    padding: 20px;
+    max-width: 320px;
+    width: 100%;
     text-align: center;
     color: #fff;
 
     &::before {
       position: absolute;
       content: '';
-      top: 0;
+      top: 25px;
       padding: 28px;
       background-repeat: no-repeat;
     }
@@ -41,13 +55,19 @@
     }
 
     span {
-      padding-left: 85px;
+      padding: 0 35px 0 90px;
       @extend %poppins-600;
       font-size: 5rem;
       line-height: 7.5rem;
+
+      @include r(480) {
+        font-size: 4rem;
+        line-height: 7rem;
+      }
     }
 
     p {
+      padding-top: 15px;
       @extend %poppins-400;
       font-size: 2rem;
       line-height: 3rem;

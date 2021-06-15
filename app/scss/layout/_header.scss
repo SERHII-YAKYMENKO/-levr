@@ -12,6 +12,18 @@
     justify-content: space-between;
     align-items: center;
 
+    &.fixed {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      padding: 0 10px;
+      width: 100%;
+      min-height: 110px;
+      background-color: #fff;
+      z-index: 999;
+    }
+
     @include r(992) {
       justify-content: flex-start;
 
