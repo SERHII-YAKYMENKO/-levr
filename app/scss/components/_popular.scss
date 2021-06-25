@@ -78,6 +78,10 @@
   &__item {
     position: relative;
     min-width: 515px;
+
+    @include r(1700) {
+      min-width: 26.75vw;
+    }
   }
 
   &__img-box {
@@ -85,7 +89,7 @@
     position: relative;
     overflow: hidden;
     padding: 0 19.5% 56%;
-    margin-right: 36px;
+    margin-right: 7%;
     height: 0;
     border-radius: 20px;
 
@@ -108,7 +112,19 @@
 
   &__content {
     display: inline-block;
-    max-width: 277px;
+    max-width: 250px;
+
+    @include r(1700) {
+      max-width: 15vw;
+    }
+
+    @include r(1440) {
+      max-width: 18vw;
+    }
+
+    @include r(1200) {
+      max-width: 21vw;
+    }
   }
 
   &__category-box {
@@ -124,20 +140,24 @@
   }
 
   &__category {
-    padding: 11px 25px;
+    padding: 11px 24px;
     margin-right: 14px;
     border-radius: 10px;
     color: $accent;
     background-color: #8d28ad26;
     transition: all ease-in-out 0.3s;
 
-    @include r(1440) {
-      padding: 11px 15px;
+    @include r(1700) {
+      padding: 11px 18px;
       margin-right: 10px;
     }
 
-    @include r(992) {
+    @include r(1440) {
       padding: 10px;
+    }
+
+    @include r(992) {
+      padding: 8px;
     }
 
     &:hover {
@@ -152,8 +172,16 @@
     border-radius: 10px;
     background-color: #FFD782;
 
-    @include r(992) {
+    @include r(1700) {
+      padding: 11px 15px;
+    }
+
+    @include r(1440) {
       padding: 10px;
+    }
+
+    @include r(992) {
+      padding: 8px;
     }
   }
 

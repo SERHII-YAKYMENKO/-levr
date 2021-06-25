@@ -1,5 +1,5 @@
 .product-top {
-  padding: 55px 0;
+  padding: 60px 0 55px;
   background-color: $service;
 
   @include r(1200) {
@@ -7,12 +7,20 @@
   }
 
   &__list {
-    margin: 0 auto;
+    margin: 0 30px;
     max-width: calc(100vw - 18px);
     width: 100%;
 
+    .jq-ry-container {
+      padding: 0;
+    }
+
     @include r(1700) {
-      max-width: 94vw;
+      max-width: 93vw;
+    }
+
+    @include r(1440) {
+      margin: 0 auto;
     }
 
     @include r(1200) {
@@ -20,17 +28,19 @@
     }
 
     .slick-slide {
-      padding: 0 15px;
+      margin: 0 50px;
+      max-width: 170px;
+    }
 
-      @include r(1700) {
-        margin-right: 15px;
-      }
+    .slick-list {
+      margin-left: -30px;
+      margin-right: -30px;
     }
 
     .slick-arrow {
       position: absolute;
-      top: 55%;
-      right: -28px;
+      top: 29.5%;
+      right: 30px;
       max-width: 58px;
       width: 100%;
       min-height: 58px;
@@ -74,7 +84,7 @@
 
   &__item {
     position: relative;
-    max-width: 170px;
+    min-width: 170px;
     width: 100%;
     min-height: 490px;
   }
@@ -82,11 +92,11 @@
   &__img-box {
     position: relative;
     display: block;
-    overflow: hidden;
     padding: 0 19.5% 143%;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
     height: 0;
     border-radius: 20px;
+    overflow: hidden;
 
     img {
       position: absolute;
@@ -141,6 +151,7 @@
   &__price {
     position: absolute;
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
     bottom: 0;
     left: 0;
@@ -169,9 +180,9 @@
 
   &__btn {
     position: absolute;
-    top: 50%;
-    right: -15%;
-    padding: 25px;
+    top: 52%;
+    right: -19%;
+    padding: 28px;
     transform: translateY(-50%);
     border-radius: 50%;
     background-color: $accent;
