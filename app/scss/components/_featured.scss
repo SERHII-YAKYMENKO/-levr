@@ -38,7 +38,7 @@
 
     .slick-arrow {
       position: absolute;
-      top: 55%;
+      top: 50%;
       right: 10%;
       max-width: 58px;
       width: 100%;
@@ -62,27 +62,43 @@
   }
 
   &__item {
-    display: flex !important;
-    padding: 50px;
+    position: relative;
+    // padding: 50px 58px;
+    padding: 50px 6%;
     max-width: 942px;
     width: 100%;
-    background-color: #FAFAFA;
     border-radius: 10px;
+    background-color: #FAFAFA;
     overflow: hidden;
+
+    .price {
+      align-items: flex-end;
+      bottom: 30%;
+      left: 0;
+    }
+
+    .price__curent {
+      font-size: 3.6rem;
+      line-height: 3.6rem;
+    }
+
+    .price__old {
+      font-size: 2rem;
+      line-height: 2.4rem;
+    }
   }
 
   &__link {
     position: relative;
-    display: block;
-    max-width: 270px;
-    width: 100%;
-    height: 386px;
-    overflow: hidden;
-    margin-right: 9.5%;
-    // padding: 0 16.5% 46%;
-    // margin-right: 80px;
-    // height: 0;
+    display: inline-block;
+    // max-width: 270px;
+    // width: 100%;
+    // height: 386px;
+    margin-right: 9%;
+    padding: 0 16.5% 46.75%;
+    height: 0;
     border-radius: 20px;
+    overflow: hidden;
 
     img {
       position: absolute;
@@ -96,26 +112,29 @@
   &__category-box {
     display: flex;
     align-items: center;
-    margin-bottom: 26px;
+    // margin-bottom: 26px;
+    margin: 10px 0 26px;
   }
 
   &__content {
     position: relative;
+    display: inline-block;
+    padding: 0 27% 47%;
+    height: 0;
+    // overflow: hidden;
 
-    .price {
-      bottom: 65px;
-      left: -14px;
-    }
+    // display: inline-block;
+    // vertical-align: top;
+    // padding-top: 8px;
+    // max-width: 23vw;
+    // max-width: 440px;
 
-    .price__curent {
-      font-size: 3.6rem;
-      line-height: 1.4;
-    }
-
-    .price__old {
-      margin-top: 5px;
-      font-size: 2rem;
-      line-height: 1.4;
+    .featured__box {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
     }
   }
 
@@ -134,7 +153,7 @@
   }
 
   &__reviews {
-    margin-left: 17px;
+    margin-left: 10px;
     color: #755A7D;
   }
 
@@ -147,9 +166,10 @@
   }
 
   &__text {
-    margin-bottom: 45px;
-    max-width: 470px;
-    width: 100%;
+    padding-bottom: 10px;
+    margin-bottom: auto;
+    font-size: 1.4rem;
+    line-height: 2.1rem;
     color: #00000080;
   }
 
@@ -184,6 +204,11 @@
     padding: 38px 37px 28px;
     border-radius: 8px;
     border: 1px solid $border;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      border-color: $accent;
+    }
 
     &::after {
       position: absolute;

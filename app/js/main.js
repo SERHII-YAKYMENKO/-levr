@@ -40,8 +40,8 @@ $(function () {
     slidesToShow: 6,
     slidesToScroll: 2,
     arrows: true,
-    prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><style>.a{stroke-linejoin:round;stroke-width:2;stroke:#8D28AD;}</style><path d="M19 12H5" class="a"/><path d="M12 5L5 12 12 19" class="a"/></svg></button>',
-    nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><style>.a{stroke-linejoin:round;stroke-width:2;stroke:#8D28AD;}</style><path d="M5 12H19" class="a"/><path d="M12 5L19 12 12 19" class="a"/></svg></button>',
+    prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16"><path d="M8 13.9L7.4 14.6C7.1 14.9 6.6 14.9 6.3 14.6L0.2 8.5C-0.1 8.2-0.1 7.8 0.2 7.5L6.3 1.4C6.6 1.1 7.1 1.1 7.4 1.4L8 2.1C8.3 2.4 8.3 2.9 8 3.2L4.3 6.8 13.3 6.8C13.7 6.8 14 7.1 14 7.5L14 8.5C14 8.9 13.7 9.3 13.3 9.3L4.3 9.3 8 12.8C8.3 13.1 8.3 13.6 8 13.9ZM8 13.9" /></svg></button>',
+    nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16"><path d="M6 2.1L6.6 1.4C6.9 1.1 7.4 1.1 7.7 1.4L13.8 7.5C14.1 7.8 14.1 8.2 13.8 8.5L7.7 14.6C7.4 14.9 6.9 14.9 6.6 14.6L6 13.9C5.7 13.6 5.7 13.1 6 12.8L9.7 9.3 0.8 9.3C0.3 9.3 0 8.9 0 8.5L0 7.5C0 7.1 0.3 6.8 0.8 6.8L9.7 6.8 6 3.2C5.7 2.9 5.7 2.4 6 2.1ZM6 2.1" /></svg></button>',
     infinite: false,
     responsive: [{
         breakpoint: 1440,
@@ -69,8 +69,8 @@ $(function () {
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: true,
-    prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><style>.a{stroke-linejoin:round;stroke-width:2;stroke:#8D28AD;}</style><path d="M19 12H5" class="a"/><path d="M12 5L5 12 12 19" class="a"/></svg></button>',
-    nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><style>.a{stroke-linejoin:round;stroke-width:2;stroke:#8D28AD;}</style><path d="M5 12H19" class="a"/><path d="M12 5L19 12 12 19" class="a"/></svg></button>',
+    prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16"><path d="M8 13.9L7.4 14.6C7.1 14.9 6.6 14.9 6.3 14.6L0.2 8.5C-0.1 8.2-0.1 7.8 0.2 7.5L6.3 1.4C6.6 1.1 7.1 1.1 7.4 1.4L8 2.1C8.3 2.4 8.3 2.9 8 3.2L4.3 6.8 13.3 6.8C13.7 6.8 14 7.1 14 7.5L14 8.5C14 8.9 13.7 9.3 13.3 9.3L4.3 9.3 8 12.8C8.3 13.1 8.3 13.6 8 13.9ZM8 13.9" /></svg></button>',
+    nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16"><path d="M6 2.1L6.6 1.4C6.9 1.1 7.4 1.1 7.7 1.4L13.8 7.5C14.1 7.8 14.1 8.2 13.8 8.5L7.7 14.6C7.4 14.9 6.9 14.9 6.6 14.6L6 13.9C5.7 13.6 5.7 13.1 6 12.8L9.7 9.3 0.8 9.3C0.3 9.3 0 8.9 0 8.5L0 7.5C0 7.1 0.3 6.8 0.8 6.8L9.7 6.8 6 3.2C5.7 2.9 5.7 2.4 6 2.1ZM6 2.1" /></svg></button>',
     infinite: false,
     responsive: [{
         breakpoint: 1440,
@@ -127,10 +127,21 @@ $(function () {
 
   $('.featured__list').slick({
     centerMode: true,
-    centerPadding: '470px',
+    centerPadding: '24.5%',
+    // centerPadding: '470px',
     arrows: true,
     prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><style>.a{stroke-linejoin:round;stroke-width:2;stroke:#8D28AD;}</style><path d="M19 12H5" class="a"/><path d="M12 5L5 12 12 19" class="a"/></svg></button>',
     nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><style>.a{stroke-linejoin:round;stroke-width:2;stroke:#8D28AD;}</style><path d="M5 12H19" class="a"/><path d="M12 5L19 12 12 19" class="a"/></svg></button>',
+    zIndex: 100,
+  });
+
+  $('.sale__slider').slick({
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    arrows: true,
+    prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16"><path d="M8 13.9L7.4 14.6C7.1 14.9 6.6 14.9 6.3 14.6L0.2 8.5C-0.1 8.2-0.1 7.8 0.2 7.5L6.3 1.4C6.6 1.1 7.1 1.1 7.4 1.4L8 2.1C8.3 2.4 8.3 2.9 8 3.2L4.3 6.8 13.3 6.8C13.7 6.8 14 7.1 14 7.5L14 8.5C14 8.9 13.7 9.3 13.3 9.3L4.3 9.3 8 12.8C8.3 13.1 8.3 13.6 8 13.9ZM8 13.9" /></svg></button>',
+    nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16"><path d="M6 2.1L6.6 1.4C6.9 1.1 7.4 1.1 7.7 1.4L13.8 7.5C14.1 7.8 14.1 8.2 13.8 8.5L7.7 14.6C7.4 14.9 6.9 14.9 6.6 14.6L6 13.9C5.7 13.6 5.7 13.1 6 12.8L9.7 9.3 0.8 9.3C0.3 9.3 0 8.9 0 8.5L0 7.5C0 7.1 0.3 6.8 0.8 6.8L9.7 6.8 6 3.2C5.7 2.9 5.7 2.4 6 2.1ZM6 2.1" /></svg></button>',
+    infinite: false,
     zIndex: 100,
   });
 
@@ -138,6 +149,47 @@ $(function () {
     $('.menu__list').toggleClass('menu__list--active');
     $('.menu__dropdown').toggleClass('menu__dropdown--active');
   });
+
+  function getTimeRemaining(endtime) {
+    const total = Date.parse(endtime) - Date.parse(new Date());
+    const seconds = Math.floor((total / 1000) % 60);
+    const minutes = Math.floor((total / 1000 / 60) % 60);
+    const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
+    const days = Math.floor(total / (1000 * 60 * 60 * 24));
+
+    return {
+      total,
+      days,
+      hours,
+      minutes,
+      seconds
+    };
+  }
+
+  function initializeClock(clockClass, endtime) {
+    const clock = document.querySelector(clockClass);
+    const daysSpan = clock.querySelector('.days');
+    const hoursSpan = clock.querySelector('.hours');
+    const minutesSpan = clock.querySelector('.minutes');
+    const secondsSpan = clock.querySelector('.seconds');
+
+    function updateClock() {
+      const t = getTimeRemaining(endtime);
+      daysSpan.innerHTML = ('0' + t.days).slice(-2);
+      hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+      minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+      secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+      if (t.total <= 0) {
+        clearInterval(timeinterval);
+      }
+    }
+    updateClock(); // run function once at first to avoid delay
+    var timeinterval = setInterval(updateClock, 1000);
+  }
+
+  const deadline = $('.countdown').attr('data-time');
+  initializeClock('.countdown', deadline);
+
 });
 
 // Get the modal
